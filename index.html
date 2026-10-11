@@ -1,0 +1,530 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jaylyn Antonio | Student Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #263746;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #101820;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h2 {
+            font-size: 22px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #73c8ed;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #101820, #203c4e);
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .profile-img {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #73c8ed;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px #00000040;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            color: #d8e5ec;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 12px 25px;
+            background: #73c8ed;
+            color: #101820;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        section.content {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: #172b3a;
+            margin-bottom: 10px;
+        }
+
+        .underline {
+            width: 55px;
+            height: 4px;
+            background: #2589b8;
+            margin: 0 auto 30px;
+            border-radius: 5px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px #0000000d;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .info-item {
+            background: #f0f5f8;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-wrap: anywhere;
+        }
+
+        .info-item strong {
+            display: block;
+            color: #176b91;
+            margin-bottom: 4px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .skill {
+            background: white;
+            padding: 23px 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px #0000000d;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-4px);
+        }
+
+        .skill h3 {
+            color: #176b91;
+            margin-bottom: 8px;
+        }
+
+        .skill-icon {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .goals-list {
+            padding-left: 22px;
+        }
+
+        .goals-list li {
+            margin-bottom: 10px;
+        }
+
+        .motto {
+            background: linear-gradient(135deg, #101820, #203c4e);
+            color: white;
+            text-align: center;
+            padding: 40px 25px;
+            border-radius: 12px;
+            font-size: 21px;
+            font-style: italic;
+        }
+
+        .motto p {
+            margin-top: 12px;
+            color: #73c8ed;
+            font-size: 14px;
+            font-style: normal;
+        }
+
+        .contact-item {
+            margin: 12px 0;
+        }
+
+        footer {
+            background: #101820;
+            color: #d8e5ec;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .info-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section.content {
+                padding: 35px 0;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <h2>Jaylyn Antonio</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#personal">Personal Info</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#skills">Skills</a>
+            <a href="#goals">Goals</a>
+        </nav>
+    </header>
+
+    <!-- HOME AND PROFILE -->
+    <section class="hero" id="home">
+
+        <img
+            src="jaylyn.jpg"
+            alt="Profile photo of Jaylyn Antonio"
+            class="profile-img"
+        >
+
+        <h1>Hi, I'm Jaylyn Antonio!</h1>
+
+        <p class="subtitle">You can call me Jay.</p>
+
+        <p>Grade 7 Student</p>
+
+        <p>
+            A confident student with dreams, goals, and a heart for learning.
+        </p>
+
+        <a href="#about" class="btn">Get to Know Me</a>
+
+    </section>
+
+    <main class="container">
+
+        <!-- ABOUT ME -->
+        <section class="content" id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="underline"></div>
+
+            <div class="card">
+                <p>
+                    Hello! My name is <strong>Jaylyn Antonio</strong>,
+                    but you can call me <strong>Jay</strong>.
+                    I am a 12-year-old Grade 7 student at
+                    <strong>Mapurao Integrated Learning School</strong>.
+                </p>
+
+                <p>
+                    I am a student who is confidently beautiful
+                    with a heart. I believe that everyone has their
+                    own unique beauty, personality, and strengths.
+                    I enjoy dancing, learning new things, and
+                    improving myself as a student.
+                </p>
+
+                <p>
+                    In the future, I dream of becoming a lawyer.
+                    I want to continue my education, work hard
+                    toward my goals, and make my family proud.
+                </p>
+            </div>
+        </section>
+
+        <!-- PERSONAL INFORMATION -->
+        <section class="content" id="personal">
+            <h2 class="section-title">Personal Information</h2>
+            <div class="underline"></div>
+
+            <div class="card">
+                <div class="info-grid">
+
+                    <div class="info-item">
+                        <strong>Full Name</strong>
+                        Jaylyn Antonio
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Nickname</strong>
+                        Jay
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Age</strong>
+                        12 years old
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Birthday</strong>
+                        February 4, 2014
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Gender</strong>
+                        Female
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Grade Level</strong>
+                        Grade 7
+                    </div>
+
+                    <div class="info-item">
+                        <strong>School</strong>
+                        Mapurao Integrated Learning School
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Location</strong>
+                        Cagayan Valley, Philippines
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Favorite Subject</strong>
+                        Mathematics
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Dream Profession</strong>
+                        Lawyer
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- HOBBIES AND FAVORITES -->
+        <section class="content" id="hobbies">
+            <h2 class="section-title">My Hobbies & Favorites</h2>
+            <div class="underline"></div>
+
+            <div class="skills-grid">
+
+                <div class="skill">
+                    <div class="skill-icon">💃</div>
+                    <h3>My Hobby</h3>
+                    <p>Dancing</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-icon">🖤</div>
+                    <h3>Favorite Colors</h3>
+                    <p>Black and Blue</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-icon">🍗</div>
+                    <h3>Favorite Food</h3>
+                    <p>Inasal</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SKILLS AND TALENTS -->
+        <section class="content" id="skills">
+            <h2 class="section-title">My Skills & Talents</h2>
+            <div class="underline"></div>
+
+            <div class="card">
+                <div class="skill-icon">🤝</div>
+
+                <h3>Teamwork</h3>
+
+                <p>
+                    One of my strengths is teamwork. I value
+                    cooperation, sharing ideas, and working
+                    together with other people to accomplish
+                    a common goal.
+                </p>
+
+                <p>
+                    I believe that teamwork helps students learn
+                    from one another and build positive relationships.
+                </p>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section class="content" id="achievements">
+            <h2 class="section-title">My Achievements</h2>
+            <div class="underline"></div>
+
+            <div class="card">
+                <div class="skill-icon">🏆</div>
+
+                <h3>School Awards</h3>
+
+                <p>
+                    I have received school awards as part of
+                    my student journey. These achievements
+                    encourage me to continue learning, doing
+                    my best, and working toward my goals.
+                </p>
+            </div>
+        </section>
+
+        <!-- FUTURE GOALS -->
+        <section class="content" id="goals">
+            <h2 class="section-title">My Dreams & Goals</h2>
+            <div class="underline"></div>
+
+            <div class="card">
+                <p>
+                    My dream is to become a successful lawyer
+                    someday. I know that achieving this dream
+                    requires education, patience, dedication,
+                    and hard work.
+                </p>
+
+                <br>
+
+                <ul class="goals-list">
+                    <li>To study hard and complete my education.</li>
+                    <li>To improve my knowledge and communication skills.</li>
+                    <li>To become more confident and responsible.</li>
+                    <li>To continue developing my talents.</li>
+                    <li>To achieve my dream of becoming a lawyer.</li>
+                    <li>To make my family proud of my achievements.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PERSONAL MOTTO -->
+        <section class="content" id="motto">
+            <h2 class="section-title">My Personal Motto</h2>
+            <div class="underline"></div>
+
+            <div class="motto">
+                "I believe that we have our own beauty."
+
+                <p>— Jaylyn Antonio</p>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="content" id="contact">
+            <h2 class="section-title">Thank You!</h2>
+            <div class="underline"></div>
+
+            <div class="card" style="text-align: center;">
+                <p>
+                    Thank you for visiting my personal portfolio
+                    and taking the time to get to know me.
+                </p>
+
+                <p>
+                    This is my journey as a student, and I look
+                    forward to learning, growing, and achieving
+                    my dreams one step at a time.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>Jaylyn Antonio</strong></p>
+        <p>Grade 7 Student | Future Lawyer</p>
+        <p>&copy; 2026 Jaylyn Antonio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
